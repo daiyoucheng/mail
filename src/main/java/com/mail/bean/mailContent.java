@@ -9,22 +9,12 @@ import java.util.Date;
  */
 @ApiModel
 public class mailContent {
-    private String from;
     private String replyTo;
     private String[] to;
     private String[] cc;
-    private String[] bcc;
     private Date sentDate;
     private String subject;
     private String text;
-
-    public String getFrom() {
-        return from;
-    }
-
-    public void setFrom(String from) {
-        this.from = from;
-    }
 
     public String getReplyTo() {
         return replyTo;
@@ -48,14 +38,6 @@ public class mailContent {
 
     public void setCc(String[] cc) {
         this.cc = cc;
-    }
-
-    public String[] getBcc() {
-        return bcc;
-    }
-
-    public void setBcc(String[] bcc) {
-        this.bcc = bcc;
     }
 
     public Date getSentDate() {
