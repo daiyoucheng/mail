@@ -56,9 +56,11 @@ public class HttpMailMessageSend {
                     .append("<p style='text-align:right'>右对齐</p>")
                     .append("<img src=\"cid:").append(rscId).append("\">");
             FileSystemResource file = new FileSystemResource(new File("E:/two/red.jpg"));
+            //邮件中插入图片
             mimeMessageHelper.setText(sb.toString(), true);
             mimeMessageHelper.addInline(rscId, file);
-
+            //带有附件的邮件 resid附件的名字
+            mimeMessageHelper.addAttachment(rscId, file);
             javaMailSender.send(mimeMessage);
         } catch (Exception e) {
             e.printStackTrace();
