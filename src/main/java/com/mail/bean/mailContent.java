@@ -2,6 +2,7 @@ package com.mail.bean;
 
 import io.swagger.annotations.ApiModel;
 
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -62,5 +63,17 @@ public class mailContent {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    @Override
+    public String toString() {
+        return "mailContent{" +
+                "replyTo='" + replyTo + '\'' +
+                ", to=" + Arrays.toString(to) +
+                ", cc=" + Arrays.toString(cc) +
+                ", sentDate=" + sentDate +
+                ", subject='" + subject + '\'' +
+                ", text='" + text + '\'' +
+                '}';
     }
 }
