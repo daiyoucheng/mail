@@ -46,7 +46,7 @@ public class SimpleMailMessageSend {
         simpleMailMessage.setSubject(content.getSubject());
         simpleMailMessage.setText(content.getText());
         javaMailSender.send(simpleMailMessage);
-        logger.info("邮件主題:" + content.getSubject() +  "  郵件內容:" + content.getText() + "   接收人:" + content.getTo().toString());
+        logger.info("邮件主題:" + content.getSubject() +  "  邮件内容:" + content.getText() + "   接收人:" + content.getTo().toString());
         logger.info("邮件发送成功");
         return "S";
     }

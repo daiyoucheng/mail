@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @ApiModel
 public class mailContent {
-    private String replyTo;
+        private String replyTo;
     private String[] to;
     private String[] cc;
     private Date sentDate;
